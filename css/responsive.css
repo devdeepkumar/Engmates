@@ -136,6 +136,8 @@
     .register_mobile {
         display: none !important
     }
+
+   
 }
 
 @media (min-width:1200px) {
@@ -306,7 +308,7 @@
     .register_mobile h3 {
         font-size: 13px;
         font-weight: 700;
-        color: #8063a0;
+        color: #fd9f1a;
         text-transform: uppercase;
         font-family: Nunito;
         display: inline-block
@@ -359,6 +361,10 @@
 
     #footer {
         margin-bottom: 55px;
+    }
+
+     .Fixed_WhatsApp_Icon{
+        display: none;
     }
 }
 
@@ -621,6 +627,11 @@
     .first-right img {
         width: 75%
     }
+
+    .register_mobile {
+        padding: 15px 17px 6px;
+                width: 93%;
+    }
 }
 
 @keyframes slideIn {
@@ -727,11 +738,18 @@
 
     .custom-checkbox {
         width: 24px;
+        margin-top: 3px;
+       
+    
+    }
+
+    .user-agree-btn p {
+    text-align: left;
     }
 
     #card_section {
     padding: 30px 0 ;
-}
+    }
 
     .tab {
         margin-left: 10px;
@@ -748,6 +766,4 @@
     .google-img-rating img {
         height: 60px;
     }
-
-
 }

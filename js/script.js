@@ -1,3 +1,51 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let count = 0;
+  let Call_Back_NO = document.querySelector("#Call_Back_NO");
+  const onLeaveCard = document.querySelector(".OnLeaveCard");
+  const card = document.querySelector(".Card");
+
+  // Make sure the OnLeaveCard is initially hidden
+  onLeaveCard.style.display = "none";
+
+  // Listen for mouseleave event at the top of the page (clientY <= 0)
+  document.addEventListener("mouseleave", function (event) {
+    if (event.clientY <= 0 && count === 0) {
+      onLeaveCard.style.display = "flex"; // Show the OnLeaveCard
+      count = 1; // Prevent showing the card again
+    }
+  });
+
+  // When user clicks outside the OnLeaveCard, hide it
+  document.addEventListener("click", function (event) {
+    if (onLeaveCard.style.display !== "none") {
+      if (!card.contains(event.target)) {
+        onLeaveCard.style.display = "none";
+        count = 1;
+      }
+    }
+  });
+
+  // No Thanks button functionality
+  document.querySelector(".No_ThanksBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    count = 1; // Prevent the card from showing again
+    onLeaveCard.style.display = "none";
+  });
+
+  // Form submission - hide OnLeaveCard and increment count
+  Call_Back_NO.addEventListener("submit", (e) => {
+    // e.preventDefault();  // Uncomment if you want to handle form submission with JS
+    count = 1;
+    onLeaveCard.style.display = "none";
+  });
+});
+
+
+
+
+
+
+
 /*
  =========================
 ? => Navbar Toggle Btn
@@ -89,46 +137,55 @@ const container = document.querySelector(".accordion-container");
 let openItem = 0;
 let isExpanded = false;
 
-// ------------- first accordionItem will be open initially
-const firstItem = accordionItems[0];
-const firstContent = firstItem.querySelector(".accordion-content");
-const firstAnswer = firstItem.querySelector(".accordion-answer");
-const firstIcon = firstItem.querySelector(".accordion-icon");
 
-firstContent.style.height = firstAnswer.scrollHeight + "px";
-firstAnswer.classList.add("show");
-firstIcon.classList.add("rotate");
 
-// ---Handle accordion clicks
+// --- Initialize fourth accordionItem to be open initially
+let openItemIndex = 3; // Set the index for the fourth item (zero-indexed)
+const initialItem = accordionItems[openItemIndex];
+const initialContent = initialItem.querySelector(".accordion-content");
+const initialAnswer = initialItem.querySelector(".accordion-answer");
+const initialIcon = initialItem.querySelector(".accordion-icon");
+
+initialContent.style.height = initialAnswer.scrollHeight + "px";
+initialAnswer.classList.add("show");
+initialIcon.classList.add("rotate");
+
+// --- Handle accordion clicks
 accordionItems.forEach((item, index) => {
-  const AccordianBtn = item.querySelector(".accordion-button");
+  const accordionBtn = item.querySelector(".accordion-button");
   const content = item.querySelector(".accordion-content");
   const answer = item.querySelector(".accordion-answer");
   const icon = item.querySelector(".accordion-icon");
 
-  AccordianBtn.addEventListener("click", () => {
-    const isOpen = openItem === index;
-
-    if (openItem !== null && openItem !== index) {
-      const prevItem = accordionItems[openItem];
-      prevItem.querySelector(".accordion-content").style.height = "0";
-      prevItem.querySelector(".accordion-answer").classList.remove("show");
-      prevItem.querySelector(".accordion-icon").classList.remove("rotate");
-    }
+  accordionBtn.addEventListener("click", () => {
+    const isOpen = openItemIndex === index;
 
     if (isOpen) {
+      // Close the currently open item
       content.style.height = "0";
-      answer.classList.toggle("show");
-      icon.classList.toggle("rotate");
-      openItem = null;
+      answer.classList.remove("show");
+      icon.classList.remove("rotate");
+      openItemIndex = null;
     } else {
+      // Close the previously open item, if any
+      if (openItemIndex !== null) {
+        const prevItem = accordionItems[openItemIndex];
+        prevItem.querySelector(".accordion-content").style.height = "0";
+        prevItem.querySelector(".accordion-answer").classList.remove("show");
+        prevItem.querySelector(".accordion-icon").classList.remove("rotate");
+      }
+
+      // Open the clicked item
       content.style.height = answer.scrollHeight + "px";
-      answer.classList.toggle("show");
-      icon.classList.toggle("rotate");
-      openItem = index;
+      answer.classList.add("show");
+      icon.classList.add("rotate");
+      openItemIndex = index;
     }
   });
 });
+
+
+
 
 // ---Handle Load More
 loadMoreBtn.addEventListener("click", () => {
