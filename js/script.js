@@ -334,7 +334,7 @@ const observer = new IntersectionObserver(
 
       if (entry.isIntersecting && scrollingDown) {
         stickyDiv.style.position = "absolute";
-        stickyDiv.style.top = "-924px";
+        stickyDiv.style.top = "-1004px";
       } else if (!entry.isIntersecting && !scrollingDown) {
         stickyDiv.style.position = "fixed";
         stickyDiv.style.top = "95px";
@@ -389,5 +389,21 @@ tabs.forEach((tab) => {
     document
       .querySelector(`[data-content="${tab.dataset.course}"]`)
       .classList.add("active");
+  });
+});
+
+
+
+
+//? Number Validation :-- 
+let User_Number = document.querySelectorAll('.User_Number');
+
+User_Number.forEach((number_field) => {
+  number_field.addEventListener('input', () => {
+    if (number_field.validity.patternMismatch) {
+      number_field.setCustomValidity('It seems the number is invalid, Your number must start with 9, 8, 7 or 6 and it must be 10 digits only.');
+    } else {
+      number_field.setCustomValidity('');
+    }
   });
 });

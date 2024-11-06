@@ -1,6 +1,21 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
 
 
+@media (max-width:1399px) {
+    .google-img-rating {
+        margin-right: 30px;
+    }
+    
+}
+
+
+@media (max-width: 1200px) {
+    .google-img-rating {
+        margin-right: -10px;
+    }
+}
+
+
 @media (min-width:640px) {
     .modal-content {
         margin: .5rem
@@ -41,8 +56,8 @@
 
     .accordion-icon,
     .up-icon {
-        width: 1.75rem;
-        height: 1.75rem
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .accordion-answer {
@@ -72,6 +87,9 @@
 }
 
 @media (min-width:768px) {
+
+   
+
     .container {
         max-width: 720px
     }
@@ -167,6 +185,11 @@
 }
 
 @media (max-width:991px) {
+
+    .down-icon-animate {
+        display: none;
+    }
+
     #hero {
         text-align: center
     }
@@ -320,11 +343,11 @@
 
     .register_mobile .right_register {
         font-weight: 700;
-        font-size: 13px;
+        font-size: 12px;
         display: inline-block;
         padding: 6px 20px;
         text-align: center;
-        margin-top: -4px;
+        margin-top: 0px;
         margin-bottom: 0;
         color: #fff;
         border-radius: 50px;
@@ -369,6 +392,43 @@
 }
 
 @media (max-width:768px) {
+
+    #people{
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .counter_block {
+        width: 84%;
+    }
+    
+
+    .testimonial-card {
+        padding: 0px;
+        width: 100%;
+    }
+
+
+    .testimonial-card p {
+        font-size: 1rem;
+        color: var(--text-para);
+        text-align: center;
+        padding: 6px 38px;
+    }
+    
+    
+
+    
+    .row_laptop{
+        display: none;
+    }
+
+
+    .row_mobile {
+        display: block;
+    }
+    
+
     #hero {
         width: 100%;
         background: #f2efea;
@@ -458,6 +518,15 @@
         position: relative;
         top: 30px
     }
+
+    .swiper_section{
+        
+        .card img{
+            top: 0px
+        }
+
+    }
+
 
     .card-content {
         background: #fff;
@@ -596,6 +665,12 @@
 }
 
 @media (max-width:476px) {
+
+    .splide__slide img {
+        width: 100px !important;
+        max-height: 100px !important;
+    }
+
     .qr-code-div {
         margin-bottom: 0
     }
@@ -630,7 +705,7 @@
 
     .register_mobile {
         padding: 15px 17px 6px;
-                width: 93%;
+                width: 100%;
     }
 }
 
@@ -644,7 +719,7 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:435px) {
 
     .hero_form {
         display: block;
@@ -682,7 +757,7 @@
     }
 
     .card-content {
-        padding: 10px
+        padding: 20px 20px;
     }
 
     .content_area {
