@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
 
 :root {
     --primary-purple: #fd9f1a;
@@ -482,29 +481,32 @@ hook section
 
 .down-icon-animate {
     position: absolute;
-    bottom: 25%;
-    font-size: 45px;
+    bottom: 26%;
+    font-size: 43px;
     left: 46.5%;
-   color: #B82A51;
-   
+    color: #B82A51;
+
 }
 
 @keyframes upDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Adjust this value to control the vertical movement */
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Adjust this value to control the vertical movement */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
-.down-icon-animate i {
-   
-    animation: upDown 1.5s infinite ease-in-out,  1.5s infinite ease-in-out;
+.down-icon-animate img {
+    height: 35px;
+    animation: upDown 1.5s infinite ease-in-out, 1.5s infinite ease-in-out;
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -706,7 +708,7 @@ hook section end
 
 #faq,
 #getreport {
-    margin-bottom: 0 ;
+    margin-bottom: 0;
 }
 
 .benefits_block_content {
@@ -1095,7 +1097,7 @@ hook section end
 
 .white_block.who .row {
     margin-bottom: 30px;
-     margin-top: 30px
+    margin-top: 30px
 }
 
 .heading_who {
@@ -1387,7 +1389,8 @@ aside {
 .close-icon img {
     width: 100%
 }
-.close-button{
+
+.close-button {
     background: #C77201 !important;
     color: white;
 }
@@ -1834,7 +1837,7 @@ Curriculum section
     }
 
 
-    .day-content{
+    .day-content {
         padding: 10px 20px;
     }
 
@@ -1978,87 +1981,87 @@ Curriculum section
 
 /* ----------- SLIDER ------------ */
 
-.swiper_section{
+.swiper_section {
 
 
-.swiper {
-    width: 100%;
-}
+    .swiper {
+        width: 100%;
+    }
 
-.swiper-wrapper {
-    width: 100%;
-    height: 35em;
-    display: flex;
-    align-items: center;
-}
+    .swiper-wrapper {
+        width: 100%;
+        height: 35em;
+        display: flex;
+        align-items: center;
+    }
 
-.card {
-    width: fit-content;
-    height: 90%;
-    background-color: #00000000;
-    border-radius: 2em;
-    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
-    padding: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 2em;
-}
+    .card {
+        width: fit-content;
+        height: 90%;
+        background-color: #00000000;
+        border-radius: 2em;
+        box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 2em;
+    }
 
-.swiper-slide:not(.swiper-slide-active) {
-    filter: blur(1px);
-}
+    .swiper-slide:not(.swiper-slide-active) {
+        filter: blur(1px);
+    }
 
 
-.card__image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
+    .card__image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
-.card img {
-    border-radius: inherit;
-}
+    .card img {
+        border-radius: inherit;
+    }
 
-.swiper-button-prev,
-.swiper-button-next {
-    background-color: transparent;
-    /* Make the background transparent */
-    border: none;
-    font-size: 2rem;
-    color: #fcae36;
-    /* Set icon color to #fcae36 */
-    cursor: pointer;
-}
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: transparent;
+        /* Make the background transparent */
+        border: none;
+        font-size: 2rem;
+        color: #fcae36;
+        /* Set icon color to #fcae36 */
+        cursor: pointer;
+    }
 
-.swiper-button-prev {
-    left: 10px;
-    /* Position the left button */
-}
+    .swiper-button-prev {
+        left: 10px;
+        /* Position the left button */
+    }
 
-.swiper-button-next {
-    right: 10px;
-    /* Position the right button */
-}
+    .swiper-button-next {
+        right: 10px;
+        /* Position the right button */
+    }
 
-/* Adjust hover effect */
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    color: #fcae36;
-    transform: scale(1.2);
-    /* Optional: Add some scaling effect on hover */
-}
+    /* Adjust hover effect */
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        color: #fcae36;
+        transform: scale(1.2);
+        /* Optional: Add some scaling effect on hover */
+    }
 
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-    content: '';
-}
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        content: '';
+    }
 
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-    content: '';
-}
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        content: '';
+    }
 
 }
 
@@ -2116,6 +2119,7 @@ Curriculum section
     font-weight: 600;
     border-radius: 3px;
 }
+
 .OnLeaveCard .Card .input {
     display: flex;
     justify-content: center;
@@ -2149,10 +2153,10 @@ Curriculum section
     font-weight: 500;
     font-size: 0.9rem;
     padding-bottom: 9px;
-   
+
 }
 
-.no_thanks_btn button{
+.no_thanks_btn button {
     border: none;
 }
 
@@ -2168,6 +2172,4 @@ Curriculum section
 /* Onleave Card Css end here  */
 
 
-.close-icon{
-
-}
+.close-icon {}
