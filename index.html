@@ -23,12 +23,26 @@
   <meta property="og:image:width" content="640">
   <meta property="og:image:height" content="480">
 
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- Preload Google Fonts -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-  <!-- Link Splide Css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css">
+  <!-- Fallback stylesheet link to ensure the font is applied even if preload fails -->
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet">
+  </noscript>
 
+
+  <!-- Preload Swiper's CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style"
+    onload="this.rel='stylesheet'">
+
+  <!-- Preload Splide's CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css" as="style"
+    onload="this.rel='stylesheet'">
 
   <link href="images/favicon-engmates.png" rel="icon">
   <link href="images/favicon-engmates.png" rel="apple-touch-icon">
@@ -36,23 +50,23 @@
   <link rel="stylesheet" href="./css/responsive.css" />
 
   <!--? Font Awesome Link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
 
   <!--? Goggle Tag Manager   -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <!-- <link rel="preconnect" href="https://www.googletagmanager.com"> -->
 
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
+  <!-- <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
           new Date().getTime(), event: 'gtm.js'
       }); var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-N567M9X8');</script>
+    })(window, document, 'script', 'dataLayer', 'GTM-N567M9X8');</script> -->
   <!-- End Google Tag Manager -->
 
 
@@ -64,8 +78,8 @@
 <body>
 
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N567M9X8" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N567M9X8" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript> -->
   <!-- End Google Tag Manager (noscript) -->
 
 
@@ -79,7 +93,7 @@
         Request a Free Call Back
       </div>
       <div class="input">
-        <form action="mail3.php" method="post" id="Call_Back_NO" class="form">
+        <form action="mail/mail3.php" method="post" id="Call_Back_NO" class="form">
           <input type="text" name="mbl_no2" class="User_Number" pattern="[6-9][0-9]{9}" required="" autocomplete="off">
           <button class="Call_MeBtn" name="submit_new2" type="submit">CALL ME BACK</button>
         </form>
@@ -201,13 +215,13 @@
             <div class="row_laptop" id="responsive-button">
               <a href="https://api.whatsapp.com/send/?phone=919319629093&text=Hello,%20I%20am%20looking%20to%20improve%20my%20English.%20Can%20you%20check%20my%20level%20and%20suggest%20the%20best%20batch%C2%A0for%C2%A0me?%20Thanks"
                 class="pay-btn btn-get-started scrollto call-for-consultations-track-btn">
-                Call For Consultaion <img loading="lazy" class="btn_arrow" src="./images/white-arrow.png" alt="call for consultation"
-                  width="20px" height="14px"></a>
+                Call For Consultaion <img loading="lazy" class="btn_arrow" src="./images/white-arrow.png"
+                  alt="call for consultation" width="20px" height="14px"></a>
             </div>
             <div class="row_mobile" id="mobile_row">
               <a href="tel:+91 9319629093" class="pay-btn btn-get-started call-for-consultation-track-btn">
-                Call For Consultaion <img loading="lazy" class="btn_arrow" src="./images/white-arrow.png" alt="call for consultation"
-                  width="20px" height="14px"></a>
+                Call For Consultaion <img loading="lazy" class="btn_arrow" src="./images/white-arrow.png"
+                  alt="call for consultation" width="20px" height="14px"></a>
             </div>
             <div class="people_joined">
               <span>1,00,000+ </span> students enrolled till date
@@ -224,18 +238,18 @@
                   life
                 </div>
                 <div class="register_mobile_details">
-                  <span class="date-and-time"><img loading="lazy" src="./engimg/calender.svg" alt="Date and time" width="100"
-                      height="100">
+                  <span class="date-and-time"><img loading="lazy" src="./engimg/calender.svg" alt="Date and time"
+                      width="100" height="100">
                     3 Months </span>
                   <span class="date-and-time"><img loading="lazy" src="./engimg/clock.svg" alt="hour" width="100"
                       height="100">
                     1.5 Hrs / 5 Days
                   </span>
-                  <span class="date-and-time"><img loading="lazy" src="./engimg/rupees.svg" alt="Free Consultation" width="100"
-                      height="100">Free Consultation
+                  <span class="date-and-time"><img loading="lazy" src="./engimg/rupees.svg" alt="Free Consultation"
+                      width="100" height="100">Free Consultation
                     Available!<!--  + GST --></span>
                 </div>
-                <form class="form_block" action="mail/mail.php" method="post" siq_id="autopick_4ucll3b2q1">
+                <form class="form_block" action="mail/mail4.php" method="post">
                   <div class="row  ">
                     <div class=" col-lg-6  mb-3 mb-sm-0">
                       <input type="text" class="form-control" placeholder="Name*" name="name" required=""
@@ -265,7 +279,7 @@
                     </div>
 
                     <div class="2 col-lg-6  mb-3  mb-sm-0">
-                      <input type="text" class="form-control" placeholder="Your Location" name="your_location"
+                      <input type="text" class="form-control" placeholder="Your Location" name="city"
                         required="" autocomplete="off">
                     </div>
                   </div>
@@ -273,7 +287,7 @@
                   <div class="row ">
                     <div class=" mb-3  mb-sm-0">
                       <input type="text" class="form-control" placeholder="Share the problem you're facing"
-                        name="clinic_location" required="" autocomplete="off">
+                      name="message" required="" autocomplete="off">
                     </div>
 
                   </div>
@@ -301,65 +315,7 @@
                   <source src="./video/Engmates.webm" playsinline="" type="video/webm">
                 </video>
                 <div class="hero_form ">
-                  <form class="form_block" action="mail/mail.php" method="post" siq_id="autopick_4ucll3b2q1">
-                    <div class="row  ">
-                      <div class=" col-lg-6  mb-3 mb-sm-0">
-                        <input type="text" class="form-control" placeholder="Name*" name="name" required=""
-                          autocomplete="off">
-                      </div>
-                      <div class="2 col-lg-6  mb-3 mb-sm-0">
-                        <input type="text" class="form-control" placeholder=" Email*" name="email" required=""
-                          autocomplete="off">
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class=" col-lg-6  mb-3 mb-sm-0 phone_no">
-                        <div class="phone-input-wrapper">
-                          <div class="country-select-wrapper">
-                            <select class="country-select" id="countryCode">
-                              <option value="+91">IN +91</option>
-
-                              <!-- Add more country codes as needed -->
-                            </select>
-                          </div>
-                          <div class="separator"></div>
-                          <input type="tel" class="phone-input form-control User_Number" placeholder="Number*"
-                            maxlength="10" pattern="[6-9][0-9]{9}" name="phone" required="" autocomplete="off" />
-                        </div>
-                        <!-- <input type="text" class="form-control User_Number" placeholder="Phone*" pattern="[6-9][0-9]{9}" name="phone" required=""> -->
-                      </div>
-
-                      <div class="2 col-lg-6  mb-3  mb-sm-0">
-                        <input type="text" class="form-control" placeholder="Your Location" name="your_location"
-                          required="" autocomplete="off">
-                      </div>
-                    </div>
-
-                    <div class="row ">
-                      <div class=" mb-3  mb-sm-0">
-                        <input type="text" class="form-control" placeholder="Share the problem you're facing"
-                          name="clinic_location" required="" autocomplete="off">
-                      </div>
-
-                    </div>
-
-
-                    <div class="row user-agree-btn ">
-                      <div class="col-12 d-flex">
-                        <!-- <label class="checkbox-wrapper mx-3"> -->
-                        <input type="checkbox" class="custom-checkbox" name="myCheckbox" checked="">
-                        <!-- </label> -->
-                        <p>I agree and accept the <span style="color: #F4C129; font-weight: 700; cursor: pointer;"
-                            onclick="openModal('TermPolicy')">Terms &amp; Conditions</span></p>
-                      </div>
-                    </div>
-
-                    <button type="submit" name="submit" class="btn-get-started">Submit<img class="btn_arrow"
-                        style="margin-left:10px;" src="./images/btn-arrow-brown.png" alt="arrow" width="20"
-                        height="17"></button>
-
-                  </form>
+                
                 </div>
               </picture>
 
@@ -407,7 +363,8 @@
           </div>
 
           <div class="down-icon-animate">
-            <i class="fa-solid fa-angle-down"></i>
+            <!-- <i class="fa-solid fa-angle-down"></i> -->
+            <img src="./images/arrow-down-sign-to-navigate.svg" alt="">
           </div>
         </div>
 
@@ -550,8 +507,8 @@
           <div class="card">
             <img loading="lazy" srcset="./engimg/training-according-to-students-understanding-level.webp"
               sizes="(max-width: 600px) 480px, 800px"
-              src="./engimg/training-according-to-students-understanding-level.webp" alt="Training according to students understanding" height="143"
-              width="175" />
+              src="./engimg/training-according-to-students-understanding-level.webp"
+              alt="Training according to students understanding" height="143" width="175" />
             <div class="card-content">
 
 
@@ -1889,33 +1846,6 @@
     </div>
   </section>
 
-  <!-- ********************** get report Section *********** -->
-  <!-- <section class="container">
-    <div class="row">
-      <div class="col-lg-9">
-        <div id="getreport" class="getreport text-center">
-          <h3 class="register_tag">Get Your Numerology Report Today</h3>
-          <div class="register_tag_msg">
-            Gain clarity on your<span style="color: #f4c129">
-              life's purpose<span style="color: #fff">,</span> improve
-              relationships</span><br />
-            &amp; unlock your<span style="color: #f4c129">
-              success potential.</span>
-          </div>
-
-          <form class="paymentForm" data-gtm-form-interact-id="0">
-            <div class="form_block">
-              <button id="submitBtn" name="submit" class="btn-get-started pay-btn" fdprocessedid="71049a">
-                Pay Now<img loading="lazy" class="btn_arrow" src="./images/btn-arrow-brown.png" alt="arrow" width="20"
-                  height="17" />
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
 
   <!-- ******************************Who section ******************** -->
   <section class="container">
@@ -1946,7 +1876,8 @@
 
           <div class="row">
             <div class="col-lg-6">
-              <img loading="lazy" src="./engimg/graduation-cap.png" alt="For College graduates" width="50" height="50" />
+              <img loading="lazy" src="./engimg/graduation-cap.png" alt="For College graduates" width="50"
+                height="50" />
               <h3 class="heading_who">For College graduates</h3>
               <div class="text_who">
                 Prepare for job interviews excel in your career and develop strong interpersonal skills with our
@@ -1955,7 +1886,8 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <img loading="lazy" src="./engimg/businessman (2).png" alt="For Entrepreneurs & Business" width="50" height="50" />
+              <img loading="lazy" src="./engimg/businessman (2).png" alt="For Entrepreneurs & Business" width="50"
+                height="50" />
               <h3 class="heading_who">For Entrepreneurs & Business</h3>
               <div class="text_who">
                 Entrepreneurs and business owners can benefit from improved language skills to communicate
@@ -3220,11 +3152,9 @@
 
 
 </body>
-<script src="./js/script.js"></script>
 <script src="./js/timmer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/js/splide.min.js"></script>
-<script src="./js/swiper.js"></script>
-<script src="./js/splide.js"></script>
+<script src="./js/script.js"></script>
 
 </html>
