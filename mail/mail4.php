@@ -28,6 +28,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 @$email_message .= "Name: ".clean_string($name)."\n";
 @$email_message .= "Email: ".clean_string($email_from)."\n";
 @$email_message .= "Phone: ".clean_string($phone)."\n";
+@$email_message .= "Location: ".clean_string($city)."\n";
 @$email_message .= "Message: ".clean_string($message)."\n";
 @$email_message .= "IP: ".clean_string($ip)."\n";
 // create email headers
