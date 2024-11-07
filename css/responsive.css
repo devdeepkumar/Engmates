@@ -301,6 +301,9 @@
 
     .register_mobile {
         display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         background: #faf9f6;
         padding: 15px 20px 15px;
@@ -326,7 +329,7 @@
 
     .register_mobile .right_register {
         font-weight: 700;
-        font-size: 13px;
+        font-size: 17px;
         display: inline-block;
         padding: 6px 20px;
         text-align: center;
@@ -340,19 +343,25 @@
         float: right;
     }
 
+    .lives-impact{
+font-size: 15px;
+    }
+
     .register_mobile_detail {
-        margin-top: 10px;
+        margin-top: 9px;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding-top: 10px;
+        padding-top: 2px;
+        align-items: center;
+        justify-content: center;
     }
 
     .register_mobile .date-and-time {
         color: #617298;
         font-size: 11px;
-        display: block;
-        margin-bottom: 10px;
+        display: flex;
+        margin-bottom: 3px;
     }
 
     .register_mobile .date-and-time img {
@@ -383,9 +392,17 @@
 
 @media (max-width:768px) {
 
-    
+    .row_laptop {
+        display: none;
+    }
+
+    .row_mobile {
+        display: block;
+    }
+
+
     .swiper_section {
-        .card img{
+        .card img {
             top: 0px;
         }
     }
@@ -671,7 +688,7 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:435px) {
 
     .hero_form {
         display: block;
@@ -722,6 +739,10 @@
 
     .content_area .left-area {
         order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         p {
             text-align: center;
